@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-Compatible" content="ie=edge" />
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="main_container">
+      <h1 id="main_title">My Personal Dashboard</h1>
+      <div id="welcome_message"></div>
+
+      <!-- User Preferences Section -->
+      <div class="section">
+        <h2>User Preferences</h2>
+        <form class="form_container" id="user_form">
+          <div class="input_group">
+            <label for="user_name">Your Name:</label>
+            <input type="text" id="user_name" placeholder="Enter your name" />
+          </div>
+
+          <div class="input_group">
+            <label for="theme_select">Favorite Theme:</label>
+            <select id="theme_select">
+              <option value="">Select a theme</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+              <option value="blue">Ocean Blue</option>
+              <option value="green">Forest Green</option>
+            </select>
+          </div>
+
+          <button type="button" id="save_preferences">Save Preferences</button>
+        </form>
+      </div>
+
+      <!-- High Scores Section -->
+      <div class="section">
+        <h2>High Scores</h2>
+        <div class="score_input">
+          <input type="text" id="game_name" placeholder="Game name" />
+          <input type="number" id="score_value" placeholder="Score" />
+          <button type="button" id="add_score">Add Score</button>
+        </div>
+        <div id="scores_display">
+          <h3>Top Scores:</h3>
+          <ul id="scores_list"></ul>
+          <button type="button" id="clear_scores">Clear All Scores</button>
+        </div>
+      </div>
+
+      <!-- Quick Notes Section -->
+      <div class="section">
+        <h2>Quick Notes</h2>
+        <textarea id="notes_area" placeholder="Write your notes here..."></textarea>
+        <div class="notes_buttons">
+          <button type="button" id="save_notes">Save Notes</button>
+          <button type="button" id="clear_notes">Clear Notes</button>
+        </div>
+      </div>
+
+      <!-- Dashboard Controls -->
+      <div class="section">
+        <h2>Dashboard Controls</h2>
+        <div id="last_saved"></div>
+        <div class="control_buttons">
+          <button type="button" id="view_storage">View Storage Data</button>
+          <button type="button" id="reset_dashboard">Reset Dashboard</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
